@@ -263,7 +263,7 @@
             ]
         },
         {
-            "id" : "winning_percentage",
+            "id" : "pythagorean_expectation",
             "label" : "ピタゴラス勝率",
             "type" : "text",
             "name" : "pythagorean_expectation",
