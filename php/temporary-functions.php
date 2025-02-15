@@ -6,7 +6,7 @@ function authorization_data( ): void
     global $database, $username, $password;
     global $layout, $bearer_session_token;
     // FileMaker Server 情報
-    $host       = 'remixworks.cloud';
+    $host       = '';
     $version    = 'vLatest';
     // FileMaker ソリューション情報
     $database   = 'BaseballSavant';
