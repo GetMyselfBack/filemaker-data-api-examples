@@ -65,27 +65,6 @@
 }
 
 {
-  // 勝率差分の計算
-  'use strict';
-  
-  // 勝率、ピタゴラス勝率のタグを取得
-  const winningPercentage       = document.getElementById("winning_percentage");
-  const pythagoreanExpectation  = document.getElementById("pythagorean_expectation");
-
-  // 値が変更されたときに呼び出される関数
-  winningPercentage.addEventListener("input", calcWinningPercentageDiﬀerence());
-  pythagoreanExpectation.addEventListener("input", calcWinningPercentageDiﬀerence());
-
-  // 勝率差分の計算
-  function calcWinningPercentageDiﬀerence( )
-  {
-    const winningPercentageDiﬀerence = Number(winningPercentage.value) - Number(pythagoreanExpectation.value);
-    document.getElementById("winning_percentage_diﬀerence").value = winningPercentageDiﬀerence.toFixed(3).slice(-4);
-    console.log(winningPercentageDiﬀerence);
-  }
-}
-
-{
   // 期待勝敗数(x-W/L)の計算
   'use strict';
 
@@ -104,5 +83,26 @@
     const expectedWinLoss = expectedWins + '-' + expectedLosses;
     document.getElementById("expected_win_loss").value = expectedWinLoss;
     console.log(expectedWinLoss);
+  }
+}
+
+{
+  // 勝率差分の計算
+  'use strict';
+  
+  // 勝率、ピタゴラス勝率のタグを取得
+  const winningPercentage       = document.getElementById("winning_percentage");
+  const pythagoreanExpectation  = document.getElementById("pythagorean_expectation");
+
+  // 値が変更されたときに呼び出される関数
+  winningPercentage.addEventListener("input", calcWinningPercentageDiﬀerence());
+  pythagoreanExpectation.addEventListener("input", calcWinningPercentageDiﬀerence());
+
+  // 勝率差分の計算
+  function calcWinningPercentageDiﬀerence( )
+  {
+    const winningPercentageDiﬀerence = Number(winningPercentage.value) - Number(pythagoreanExpectation.value);
+    document.getElementById("winning_percentage_diﬀerence").value = winningPercentageDiﬀerence.toFixed(3);
+    console.log(winningPercentageDiﬀerence);
   }
 }
