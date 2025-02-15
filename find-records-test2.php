@@ -11,12 +11,12 @@ $page_indentity     = $page_indentity === null ? 1 : $page_indentity;
 require_once(__DIR__ . '/php/preferences.php');
 
 // FileMaker Server 情報
-$host       = 'remixworks.cloud';
+$host       = '';
 $version    = 'vLatest';
 // FileMaker ソリューション情報
-$database   = 'remixworks_test';
-$username   = 'remixworks_1228';
-$password   = 'tomikf19';
+$database   = '';
+$username   = '';
+$password   = '';
 // リクエスト情報
 $layout     = 'standings';
 $request_body_json_file = __DIR__ . '/json/standings-all-2024.json';
