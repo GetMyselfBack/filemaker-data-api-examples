@@ -1,0 +1,20 @@
+{
+    "query" :
+    [
+        {
+            "year" : 2024,
+            "league" : "アメリカン・リーグ",
+            "division" : "東地区",
+            "omit" : "false"
+        }
+    ],
+    "sort" :
+    [
+        {
+            "fieldName" : "wins",
+            "sortOrder" : "descend"
+        }
+    ],
+    "offset" : "1",
+    "limit" : "30"
+}

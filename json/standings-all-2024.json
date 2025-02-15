@@ -1,0 +1,22 @@
+{
+    "query" :
+    [
+        {
+            "year" : 2024,
+            "omit" : "false"
+        }
+    ],
+    "sort" :
+    [
+        {
+            "fieldName" : "league",
+            "sortOrder" : "ascend"
+        },
+        {
+            "fieldName" : "wins",
+            "sortOrder" : "descend"
+        }
+    ],
+    "offset" : "1",
+    "limit" : "30"
+}
