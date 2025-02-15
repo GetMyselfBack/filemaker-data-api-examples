@@ -33,7 +33,7 @@ $form_button_text   = [];
 foreach ($temp_array['formContents'] as $key => $value) {
     array_push($form_heading, $value['heading']);
     if ($value['action'] === 'PHP_SELF')
-        $value['action'] = "\$_SERVER['PHP_SELF']";
+        $value['action'] = "$_SERVER['PHP_SELF']";
     array_push($form_action, $value['action']);
     array_push($form_button_color, $value['buttonColor']);
     array_push($form_button_text, $value['buttonText']);
