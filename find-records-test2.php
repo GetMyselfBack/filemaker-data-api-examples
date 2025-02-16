@@ -5,8 +5,8 @@ require_once(__DIR__ . '/php/bs-builder-class.php');
 require_once(__DIR__ . '/php/php-functions.php');
 require_once(__DIR__ . '/php/filemaker-data-api-class.php');
 
-@$page_indentity    = $_POST['page-identity'];
-$page_indentity     = $page_indentity === null ? 1 : $page_indentity;
+@$page_identity    = $_POST['page-identity'];
+$page_identity     = $page_identity === null ? 1 : $page_identity;
 
 require_once(__DIR__ . '/php/preferences.php');
 
