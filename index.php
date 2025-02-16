@@ -5,8 +5,8 @@ require_once(__DIR__ . '/php/bs-builder-class.php');
 require_once(__DIR__ . '/php/php-functions.php');
 require_once(__DIR__ . '/php/filemaker-data-api-class.php');
 
-@$page_indentity        = $_POST['page-identity'];
-$page_indentity         = $page_indentity === null ? 1 : $page_indentity;
+@$page_identity        = $_POST['page-identity'];
+$page_identity         = $page_identity === null ? 1 : $page_identity;
 
 require_once(__DIR__ . '/php/preferences.php');
 
@@ -32,13 +32,13 @@ BsFrame::HtmlBegin($color_modes_js, $description, $author, $title, $bootstrap_cs
 BsFrame::LoadColorModesSvg();
 BsFrame::ColorModes();
 
-BsBuilder::MainBegin($logo_svg, $logo_svg_width, $page_heading[$page_indentity], $page_lead[$page_indentity]);
+BsBuilder::MainBegin($logo_svg, $logo_svg_width, $page_heading[$page_identity], $page_lead[$page_identity]);
 
 BsBuilder::InfoItem($info_heading, $info_number_of_items, $info_item_heading, $info_item_content);
 BsBuilder::GetInfo();
 
 BsBuilder::CreateForm($form_preferences, $form_controls, $response_field_data);
-BsBuilder::CreatePagination($page_indentity);
+BsBuilder::CreatePagination($page_identity);
 BsBuilder::MainEnd();
 BsBuilder::CreateFooter($copyright_year, $copyright_holder, $link_items);
 
