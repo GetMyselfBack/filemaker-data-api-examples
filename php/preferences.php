@@ -33,7 +33,7 @@ $form_button_text   = [];
 foreach ($temp_array['formContents'] as $key => $value) {
     array_push($form_heading, $value['heading']);
     if ($value['action'] === 'PHP_SELF')
-        $value['action'] = "$_SERVER['PHP_SELF']";
+        $value['action'] = "{$_SERVER['PHP_SELF']}";
     array_push($form_action, $value['action']);
     array_push($form_button_color, $value['buttonColor']);
     array_push($form_button_text, $value['buttonText']);
@@ -53,14 +53,14 @@ foreach ($temp_array['infoItems'] as $key => $value) {
 $form_controls           = $temp_array['formControls'];
 
 for ($i = 0; $i < count($form_controls); $i++) {
-  $form_controls[$i]['disabled']  = $page_indentity >= 2 ? 'disabled' : '';
+  $form_controls[$i]['disabled']  = $page_identity >= 2 ? 'disabled' : '';
 }
 
 $form_preferences = [
-  $form_heading[$page_indentity],
-  $form_action[$page_indentity],
-  $form_button_color[$page_indentity],
-  $form_button_text[$page_indentity]
+  $form_heading[$page_identity],
+  $form_action[$page_identity],
+  $form_button_color[$page_identity],
+  $form_button_text[$page_identity]
 ];
 
 $response_field_data  = [];
